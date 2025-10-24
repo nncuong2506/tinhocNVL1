@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot với sản phẩm</title>
+    <style>
+        body { font-family: Arial; margin: 50px; }
+        #chatbox { width: 500px; height: 400px; border: 1px solid #ccc; padding: 10px; overflow-y: scroll; margin-bottom: 10px; }
+        #user_input { width: 300px; }
+        #product_select { width: 150px; }
+        button { padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <h2>Chatbot</h2>
+    <div id="chatbox"></div>
+    <div>
+        <select id="product_select">
+            <option value="">--Chọn sản phẩm--</option>
+            <option value="Sản phẩm A">Sản phẩm A</option>
+            <option value="Sản phẩm B">Sản phẩm B</option>
+            <option value="Sản phẩm C">Sản phẩm C</option>
+        </select>
+        <input type="text" id="user_input" placeholder="Nhập tin nhắn">
+        <button onclick="sendMessage()">Gửi</button>
+    </div>
+
+    <script>
+        const API_URL = "https://ten-app-flask-cua-ban.onrender.com/predict";
+
+        function addMessage(sender, message) {
+            const chatbox = document.getElementById('chatbox');
+            chatbox.innerHTML += `<b>${sender}:</b> ${message}<br>`;
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('user_input');
+            const productSelect = document.getElementById('product_select');
+            const message = input.value;
+            const selectedProduct = productSelect.value;
+
+            if (!message && !selectedProduct) return;
+
+            if (message) addMessage('Bạn', message);
+            if (selectedProduct) addMessage('Bạn', `Bạn chọn: ${selectedProduct}`);
+
+            input.value = '';
+            productSelect.value = '';
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message, selected_product: selectedProduct })
+                });
+                const data = await response.json();
+                addMessage('Bot', data.answer);
+            } catch (error) {
+                addMessage('Bot', 'Lỗi kết nối server Python');
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>

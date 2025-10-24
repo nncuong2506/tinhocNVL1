@@ -1,0 +1,155 @@
+{
+  "intents": [
+    {
+      "tag": "chao_hoi",
+      "patterns": [
+        "Xin chào",
+        "Chào bạn",
+        "Chào",
+        "Hello",
+        "Hi",
+        "Hey",
+        "Bạn khỏe không",
+        "Chào chatbot",
+        "Rất vui được gặp bạn"
+      ],
+      "responses": [
+        "Chào bạn! Mình là trợ lý ảo giúp bạn học Tin học.",
+        "Xin chào! Bạn cần mình hỗ trợ phần nào trong bài học Tin học?",
+        "Hello! Rất vui được giúp bạn học về máy tính và quản lí dữ liệu."
+      ]
+    },
+    {
+      "tag": "tam_biet",
+      "patterns": [
+        "Tạm biệt",
+        "Chào tạm biệt",
+        "Bye",
+        "Hẹn gặp lại",
+        "Tôi đi đây"
+      ],
+      "responses": [
+        "Tạm biệt nhé! Chúc bạn học tốt!",
+        "Hẹn gặp lại bạn sau!",
+        "Bye bye! Khi nào cần hãy quay lại nhé!"
+      ]
+    },
+    {
+      "tag": "quan_ly_du_lieu",
+      "patterns": [
+        "Quản lí dữ liệu trong máy tính là gì",
+        "Máy tính quản lí dữ liệu như thế nào",
+        "Thế nào là quản lí dữ liệu",
+        "Nêu khái niệm quản lí dữ liệu trong máy tính"
+      ],
+      "responses": [
+        "Quản lí dữ liệu trong máy tính là quá trình tổ chức, lưu trữ, truy cập và xử lí các tệp (file) và thư mục (folder) trên thiết bị lưu trữ.",
+        "Quản lí dữ liệu là cách sắp xếp, lưu trữ, tìm kiếm và sử dụng dữ liệu một cách khoa học trong máy tính."
+      ]
+    },
+    {
+      "tag": "thu_muc",
+      "patterns": [
+        "Thư mục là gì",
+        "Folder là gì",
+        "Thư mục có chức năng gì",
+        "Thư mục dùng để làm gì"
+      ],
+      "responses": [
+        "Thư mục (Folder) là nơi dùng để chứa các tệp tin hoặc thư mục con, giúp người dùng sắp xếp dữ liệu khoa học hơn.",
+        "Thư mục là một vùng lưu trữ giúp nhóm các tệp tin có liên quan lại với nhau."
+      ]
+    },
+    {
+      "tag": "tep_tin",
+      "patterns": [
+        "Tệp tin là gì",
+        "File là gì",
+        "Tệp tin có chức năng gì",
+        "Tệp tin dùng để làm gì"
+      ],
+      "responses": [
+        "Tệp tin (File) là đơn vị cơ bản dùng để lưu trữ dữ liệu trong máy tính, như văn bản, hình ảnh, video,...",
+        "Tệp tin là nơi chứa thông tin được lưu trên bộ nhớ để người dùng có thể mở, chỉnh sửa hoặc sao chép."
+      ]
+    },
+    {
+      "tag": "phan_mo_rong",
+      "patterns": [
+        "Phần mở rộng của tệp tin là gì",
+        "Đuôi tệp tin dùng để làm gì",
+        "Ví dụ về phần mở rộng của tệp tin",
+        "Tại sao tệp tin lại có phần mở rộng",
+        "Nếu nhập sai phần mở rộng thì sao"
+      ],
+      "responses": [
+        "Phần mở rộng là nhóm ký tự sau dấu chấm trong tên tệp tin, giúp máy tính biết loại tệp và phần mềm dùng để mở nó. Ví dụ: .docx, .jpg, .mp3.",
+        "Phần mở rộng giúp hệ điều hành xác định chương trình phù hợp để mở tệp tin, ví dụ: .txt cho văn bản, .png cho hình ảnh.",
+        "Nếu nhập sai phần mở rộng, hệ thống sẽ báo lỗi — bạn cần nhập đúng định dạng như .jpg, .png, .docx,... nhé!"
+      ]
+    },
+    {
+      "tag": "ten_tep",
+      "patterns": [
+        "Tên tệp tin là gì",
+        "Tên thư mục là gì",
+        "Tên tệp tin gồm những phần nào",
+        "Tên tệp tin có phần mở rộng không"
+      ],
+      "responses": [
+        "Tên tệp tin gồm hai phần: phần tên và phần mở rộng, được ngăn cách bởi dấu chấm. Ví dụ: BaiTap.docx.",
+        "Tên tệp tin giúp người dùng nhận biết nội dung hoặc mục đích của tệp."
+      ]
+    },
+    {
+      "tag": "hanh_dong_voi_tep",
+      "patterns": [
+        "Những thao tác thường dùng với tệp tin là gì",
+        "Có thể làm gì với tệp tin",
+        "Nêu các thao tác thường dùng khi quản lí dữ liệu",
+        "Các thao tác quản lí tệp tin và thư mục"
+      ],
+      "responses": [
+        "Các thao tác thường dùng gồm: tạo, sao chép, di chuyển, đổi tên và xóa tệp hoặc thư mục.",
+        "Khi quản lí dữ liệu, người dùng có thể thực hiện các thao tác như tạo thư mục mới, đổi tên tệp, sao chép hoặc xóa tệp."
+      ]
+    },
+    {
+      "tag": "sao_chep_di_chuyen",
+      "patterns": [
+        "Sao chép tệp tin khác gì với di chuyển tệp tin",
+        "Phân biệt giữa sao chép và di chuyển tệp tin",
+        "Sao chép và di chuyển tệp có gì khác nhau"
+      ],
+      "responses": [
+        "Sao chép tạo ra một bản sao ở vị trí mới, còn di chuyển là chuyển tệp từ vị trí cũ sang vị trí mới và xóa bản gốc.",
+        "Khi sao chép, tệp gốc vẫn được giữ nguyên. Khi di chuyển, tệp gốc bị xóa sau khi chuyển đến nơi mới."
+      ]
+    },
+    {
+      "tag": "xoa_khoi_phuc",
+      "patterns": [
+        "Khi xóa tệp tin thì điều gì xảy ra",
+        "Tệp tin bị xóa có thể khôi phục được không",
+        "Tệp bị xóa lưu ở đâu",
+        "Làm sao để khôi phục tệp tin đã xóa"
+      ],
+      "responses": [
+        "Khi xóa tệp tin, nó sẽ được chuyển vào Thùng rác (Recycle Bin) và có thể khôi phục lại.",
+        "Nếu bạn xóa vĩnh viễn hoặc làm trống Thùng rác, tệp sẽ không thể khôi phục được bằng cách thông thường."
+      ]
+    },
+    {
+      "tag": "meo_su_dung",
+      "patterns": [
+        "Làm thế nào để quản lí dữ liệu hiệu quả",
+        "Mẹo quản lí dữ liệu trong máy tính",
+        "Cách sắp xếp dữ liệu hợp lý"
+      ],
+      "responses": [
+        "Hãy đặt tên tệp rõ ràng, lưu các tệp cùng chủ đề trong cùng thư mục, thường xuyên sao lưu dữ liệu quan trọng.",
+        "Tạo thư mục theo chủ đề, sắp xếp khoa học và xóa bớt tệp không cần thiết để dễ quản lí hơn."
+      ]
+    }
+  ]
+}
